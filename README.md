@@ -35,3 +35,6 @@
 集群监控:Zabbix
 
 元数据管理:Alas
+# 流程
+![数仓流程图](https://user-images.githubusercontent.com/103411715/174213438-3502163c-ba0c-429d-a15b-c0ccc717575d.png)
+
