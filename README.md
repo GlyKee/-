@@ -494,7 +494,7 @@ load data inpath '/origin_data/gmall/log/topic_log/2020-06-14' into table ods_lo
 
 本层内容：1）对用户行为数据解析。2）对核心数据进行判空过滤。3）对业务数据采用**维度模型**重新建模。
 
-### 数据个
+### 数据格式
 
 日志数据分为普通日志和启动日志。普通日志包含common（用户信息）+actions（用户动作，例如添加购物车）+display（页面具体模块，例如查询模块）+page（页面信息）.
 
@@ -590,9 +590,7 @@ load data inpath '/origin_data/gmall/log/topic_log/2020-06-14' into table ods_lo
 
 要将日志进行分类，并提取其中的信息为不同列，需要借助hive函数get_json_object()。该函数需要传入两个参数，第一个参数是字符串，可以是json字符串也可以是jsonarray字符串，第二个参数表示你要提取的部分。例如'$[0]'表示jsonarray的第一个json object。如果是json object，可以用'$.属性名'来获取其中某个属性对应的值。
 
-日志分成这几种表：启动日志表、页面日志表、动作日志表、曝光日志表、错误日志表。
-
-### 启动日志表
+日志分成这几种表：启动日志表、页面日志表、动作日志表、曝光日志表、错误日志表。下面以启动日志表为例，其他表也基本相同。
 
 ```sql
 drop table if exists dwd_start_log;
