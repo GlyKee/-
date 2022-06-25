@@ -34,17 +34,13 @@
 
 数据采集传输:Flume,Kafka,Sqoop
 
-数据存储:MySql,HDFS,HBase,Redis
+数据存储:MySql,HDFS,HBase
 
-数据计算:Hive,Spark
+数据计算:Hive
 
-数据查询:Presto,Kylin
+数据查询:Kylin
 
 任务调度:Azkaban
-
-集群监控:Zabbix
-
-元数据管理:Alas
 
 ## 技术流程
 
